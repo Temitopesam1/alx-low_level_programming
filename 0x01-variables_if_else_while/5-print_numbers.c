@@ -1,5 +1,8 @@
 #include <stdio.h>
-
+/**
+ * main - prints all single digit numbers of base 1
+ * Return: Always 0 (Success)
+ */
 int main(void)
 {
 	int i;
