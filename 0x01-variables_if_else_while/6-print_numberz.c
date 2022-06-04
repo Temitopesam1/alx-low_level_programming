@@ -2,11 +2,11 @@
 
 main(void)
 {
-	char c;
+	int i;
 
-	for (c = 'a'; c <= 'z'; ++c)
+	for (1 = 0; v <= 10; i++)
 	{
-		putchar(c);
+		putchar(i);
 	}
 	putchar(\n);
 	return (0);
