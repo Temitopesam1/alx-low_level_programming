@@ -3,7 +3,7 @@
  * main - prints the alphabet in lowercase, followed by a new line.
  * Return: always 0 (success)
  */
-main(void)
+int main(void)
 {
 	char c;
 
