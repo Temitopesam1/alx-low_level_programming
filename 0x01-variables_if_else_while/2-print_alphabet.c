@@ -1,9 +1,10 @@
 #include <stdio.h>
 /**
- * main - assign a random number to the variable n
- * return: always 0 (success)
+ * main - prints all alphabets in lowercase,
+ * followed by a new line
+ * Return: always 0 (success)
  */
-main(void)
+int main(void)
 {
 	char c;
 
@@ -11,6 +12,6 @@ main(void)
 	{
 		putchar(c);
 	}
-	putchar(\n);
+	putchar('\n');
 	return (0);
 }
