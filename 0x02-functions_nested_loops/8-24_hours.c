@@ -20,7 +20,7 @@ void jack_bauer(void)
                         {
                                 break;
                         }
-                        for (y = 0; y <= 5; c++)
+                        for (c = 0; c <= 5; c++)
                         {
                                 for (d = 0; d <= 9; d++)
                                 {
