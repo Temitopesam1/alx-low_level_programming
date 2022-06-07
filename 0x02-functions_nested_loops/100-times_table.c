@@ -18,7 +18,15 @@ void print_times_table(int n)
 				{
 					_putchar(c + '0');
 				}
-				else if (c < 10 && j != 0)
+				else if (c < 10 && b != 0)
+				{
+					_putchar(',');
+					_putchar(' ');
+					_putchar(' ');
+					_putchar(' ');
+					_putchar(c + '0');
+				}
+				else if (c >= 10 && b < 100)
 				{
 					_putchar(',');
 					_putchar(' ');
