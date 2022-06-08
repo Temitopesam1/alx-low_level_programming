@@ -1,4 +1,4 @@
-#include <stdio.h
+#include <stdio.h>
 
 /**
  * main - prints the first 50 Fibonacci numbers, starting with 1 and 2
@@ -16,11 +16,11 @@ int main(void)
 	{
 		if (b != 20365011074)
 		{
-			printf("%1d", b);
+			printf("%ld, ", b);
 		}
 		else
 		{
-			printf('%1d\n", b);
+			printf("%ld\n", b);
 		}
 		d = b + c;
 		b = c;

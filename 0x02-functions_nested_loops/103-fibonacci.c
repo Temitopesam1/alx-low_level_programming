@@ -12,6 +12,7 @@ int main(void)
 
 	b = 1;
 	c = 2;
+	sum = 0;
 
 	for (a = 1; a <= 33; ++a)
 	{
@@ -23,7 +24,7 @@ int main(void)
 		b = c;
 		c = d;
 	}
-	printf("%1u\n", sum);
+	printf("%lu\n", sum);
 	return (0);
 }
 
