@@ -20,8 +20,9 @@ int main(void)
 
 	for (a = 1; a <= 100; a++)
 	{
-		printf("%d ", a);
-		if (a == 100)
+		if (a != 100)
+			printf("%d ", a);
+		else
 			printf("%d", a);
 		if ((a % 3) == 0)
 		{
