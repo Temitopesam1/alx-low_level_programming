@@ -13,29 +13,29 @@
 
 int main(void)
 {
-	int a;
-	char b[5] = "Fizz";
-	char c[5] = "Buzz";
-	char d[10] = "FizzBuzz";
+	int i;
 
-	for (a = 1; a <= 100; a++)
+	for (i = 1; i <= 100; i++)
 	{
-		if (a != 100)
-			printf("%d ", a);
-		else
-			printf("%d", a);
-		if ((a % 3) == 0)
+		if (i % 3 == 0 && i % 5 != 0)
 		{
-			printf("%s ", b);
-		}
-		else if ((a % 5) == 0)
+			printf(" Fizz");
+		} else if (i % 5 == 0 && i % 3 != 0)
 		{
-			printf("%s ", c);
-		}
-		else if ((a % 3) && (a % 5) == 0)
+			printf(" Buzz");
+		} else if (i % 3 == 0 && i % 5 == 0)
 		{
-			printf("%s ", d);
+			printf(" FizzBuzz");
+		} else if (i == 1)
+		{
+			printf("%d", i);
+		} else
+		{
+			printf(" %d", i);
 		}
 	}
+	printf("\n");
+
 	return (0);
+
 }
