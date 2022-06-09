@@ -21,6 +21,8 @@ int main(void)
 	for (a = 1; a <= 100; a++)
 	{
 		printf("%d ", a);
+		if (a == 100)
+			printf("%d", a);
 		if ((a % 3) == 0)
 		{
 			printf("%s ", b);
