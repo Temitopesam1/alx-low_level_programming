@@ -20,18 +20,18 @@ int main(void)
 
 	for (a = 1; a <= 100; a++)
 	{
-		printf("%d\s", a);
+		printf("%d ", a);
 		if ((a % 3) == 0)
 		{
-			printf("%s\s", b);
+			printf("%s ", b);
 		}
 		else if ((a % 5) == 0)
 		{
-			printf("%s\s", c);
+			printf("%s ", c);
 		}
 		else if ((a % 3) && (a % 5) == 0)
 		{
-			printf("%s\s", d);
+			printf("%s ", d);
 		}
 	}
 	return (0);
