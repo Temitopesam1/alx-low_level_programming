@@ -9,15 +9,17 @@
 
 void rev_string(char *s)
 {
-	/*int a, b;
+	/**
+	 * int a, b;
+	 *
+	 * a = strlen(s);
+	 * for (b = a; b >= 0; b--)
+	 * {
+	 *	if (s[b] != '\0')
+	 *		return (s[b]);
+	 * }
+	 */
 
-	a = strlen(s);
-	for (b = a; b >= 0; b--)
-	{
-		if (s[b] != '\0')
-			return (s[b]);
-	}*/
-	
 	int i, n = strlen(s);
 	char ch;
 
