@@ -18,12 +18,13 @@ void rev_string(char *s)
 			return (s[b]);
 	}*/
 	
-	int n = strlen(str);
+	int i, n = strlen(s);
+	char ch;
 
-  	for (int i = 0; i < n / 2; i++)
+  	for (i = 0; i < n / 2; i++)
   	{
-    		char ch = str[i];
-    		str[i] = str[n - i - 1];
-    		str[n - i - 1] = ch;
+    		ch = s[i];
+    		s[i] = s[n - i - 1];
+    		s[n - i - 1] = ch;
   	}
 }
