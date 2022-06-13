@@ -11,19 +11,21 @@
 
 void print_rev(char *s)
 {
-	 // declare static variable  
-    	static int i, len, temp;
-    
-	len = strlen(s); // use strlen() to get the length of str string
-
-    	if (i < len/2)
-	{  
-        	// temp variable use to temporary hold the string  
-        	temp = s[i];  
-       	 	s[i] = s[len - i - 1];  
-        	s[len - i - 1] = temp;  
-        	i++;
-		puts(s);
-		revstr(s); // recusively calls the revstr() function  
+	char rev[1000];
+    	int i, j, count = 0;
+	
+	//finding the length of the string
+    	while (s[count] != '\0')
+    	{
+        	count++;
     	}
+    	j = count - 1;
+
+  	//reversing the string by swapping
+    	for (i = 0; i < count; i++)
+    	{
+        	rev[i] = s[j];
+        	j--;
+    	}
+	puts(rev);
 }
