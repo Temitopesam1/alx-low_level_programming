@@ -7,7 +7,7 @@
  * Return: the string and append newline.
  */
 
-int _puts(char *str)
+void _puts(char *str)
 {
 	return (puts(str));
 }
