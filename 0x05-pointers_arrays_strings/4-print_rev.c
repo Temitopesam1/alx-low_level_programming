@@ -11,5 +11,5 @@
 
 void print_rev(char *s)
 {
-	return (puts(strrev(str)));
+	puts(strrev(str));
 }
