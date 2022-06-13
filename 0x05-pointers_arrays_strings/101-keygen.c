@@ -5,7 +5,7 @@
 int password(int password_length)
 {
 	password_length = 8;
-	char list[] = "1234567890qwertyuiopasdfghjklzxcvbnm!@#$%^&*()_- +=QWERTYUIOPASDFGHJKLZXCVBNM[]{};':\"<>,.?/\\|";
+	char list[] = {"1234567890qwertyuiopasdfghjklzxcvbnm!@#$%^&*()_- +=QWERTYUIOPASDFGHJKLZXCVBNM[]{};':\"<>,.?/\\|"};
 	
 	srand(time(NULL));
 	for(int i = 0; i < password_length; i++)
