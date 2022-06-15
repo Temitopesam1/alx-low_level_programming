@@ -11,5 +11,9 @@
 
 char *_strncat(char *dest, char *src, int n)
 {
+<<<<<<< HEAD
 	return (strncat(dest, src, n));
+=======
+	return (strcmp(s1, s2));
+>>>>>>> 567c778ab44697a7160d3032cf16a16d41440820
 }
