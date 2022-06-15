@@ -2,13 +2,14 @@
 #include <string.h>
 
 /**
- * _strcmp -  a function that compares two strings.
- * @s1: first parameter.
- * @s2: second parameter.
+ * _strncat -  a function that concatenates two strings.
+ * @src: first parameter.
+ * @dest: second parameter.
+ * @n: third parameter.
  * Return: 0
  */
 
-int _strcmp(char *s1, char *s2)
+char *_strncat(char *dest, char *src, int n)
 {
-	return (strncat(s1, s2));
+	return (strncat(dest, src, n));
 }
