@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> ab428cb758a0c9a44adde9f07c24f4b8c08cba47
 int _putchar(char c);
 char *_strcat(char *dest, char *src);
 char *_strncat(char *dest, char *src, int n);
@@ -11,4 +14,7 @@ char *leet(char *);
 char *rot13(char *);
 void print_number(int n);
 char *infinite_add(char *n1, char *n2, char *r, int size_r);
+<<<<<<< HEAD
 
+=======
+>>>>>>> ab428cb758a0c9a44adde9f07c24f4b8c08cba47
