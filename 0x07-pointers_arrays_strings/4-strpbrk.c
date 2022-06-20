@@ -11,5 +11,5 @@
 
 unsigned int _strbrk(char *s, char *accept)
 {
-	return (strbrk(s, c));
+	return (strbrk(s, accept));
 }
