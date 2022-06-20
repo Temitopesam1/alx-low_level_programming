@@ -11,9 +11,5 @@
 
 char *_strpbrk(char *s, char *accept)
 {
-<<<<<<< HEAD
 	return (strpbrk(s, accept));
-=======
-	return (strbrk(s, accept));
->>>>>>> 8f2229888b1113fcca06296cc0afb2454d3e7fa6
 }
