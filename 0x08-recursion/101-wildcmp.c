@@ -20,7 +20,7 @@ int wildcmp(char *s1, char *s2)
 	{
 		if (*s1 == '\0')
 			return (1);
-		return (wildcmp(s1 + 1, s2 + 1));
+	return (wildcmp(s1 + 1, s2 + 1));
 	}
 	if (*s1 == '\0' || *s2 == '\0')
 		return (0);
@@ -36,6 +36,7 @@ int wildcmp(char *s1, char *s2)
 	}
 	return (0);
 }
+
 /**
  *check_path - checks recursively for all the paths when the
  * characters are equal
@@ -44,7 +45,6 @@ int wildcmp(char *s1, char *s2)
  *
  * Return: return value of wildcmp() or of itself
  */
-
 int check_path(char *s1, char *s2)
 {
 	if (*s1 == '\0')
@@ -52,6 +52,7 @@ int check_path(char *s1, char *s2)
 	if (*s1 == *s2)
 		return (wildcmp(s1, s2));
 	return  (check_path(s1 + 1, s2));
+
 }
 
 /**
@@ -60,7 +61,6 @@ int check_path(char *s1, char *s2)
  *
  * Return: the address of the character after the *
  */
-
 char *move_char(char *s2)
 {
 	if (*s2 == '*')
