@@ -20,16 +20,13 @@ int main(int argc, char **argv)
 		{
 			for (c = 0; argv[b][c] != '\0'; c++)
 			{
-				if (isdigit(argv[b][c]))
-				{
-					add += atoi(argv[b]);
-				}
-				else
+				if (!isdigit(argv[b][c]))
 				{
 					puts("Error");
 					return (1);
 				}
 			}
+			add += atoi(argv[b]);
 		}
 
 		printf("%d\n", add);

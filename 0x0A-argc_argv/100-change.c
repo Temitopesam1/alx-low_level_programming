@@ -20,7 +20,11 @@ int main(int argc, char **argv)
 		{
 			a = atoi(argv[cents]);
 			if (a < 0)
-				printf("%d\n", 0);
+			{
+				break;
+				printf("0\n");
+				return (0);
+			}
 			else
 			{
 				for (j = 0; j < 5 && a >= 0; j++)
