@@ -13,8 +13,8 @@ int sum_listint(listint_t *head)
 
 	while (head != 0)
 	{
-		counter += head -> n;
-		head = head -> next;
+		counter += head->n;
+		head = head->next;
 	}
 	return (counter);
 }
