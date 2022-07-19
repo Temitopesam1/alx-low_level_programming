@@ -17,25 +17,24 @@ listint_t *add_nodeint_end(listint_t **head, const int n)
 
 	if (point == NULL)
 		return (NULL);
+
+	point->n = n;
+	if (*head == NULL)
+	{
+		point->next = NULL;
+		*head = point;
+	}
 	else
 	{
-		point -> n = n;
-		if (*head == NULL)
+		temp = *head;
+		while (temp->next != 0)
 		{
-			point -> next = NULL;
-			*head = point;
+			temp = temp->next;
 		}
-		else
-		{
-			temp = *head;
-			while (temp -> next != 0)
-			{
-				temp = temp -> next;
-			}
-			temp -> next = point;
-			point -> next = NULL;
-		}
+		temp->next = point;
+		point->next = NULL;
 	}
+
 	return (point);
-	free (point);
+	free(point);
 }
