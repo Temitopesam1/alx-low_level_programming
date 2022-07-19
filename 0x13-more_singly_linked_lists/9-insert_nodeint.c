@@ -19,22 +19,21 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 
 	if (point == NULL)
 		return (NULL);
-	else
+	
+	point->n = n;
+	temp = *head;
+
+	for (a = 1; a < idx; a++)
 	{
-		point -> n = n;
-		temp = *head;
+		temp = temp->next;
 
-		for (a = 1; a < idx; a++)
-		{
-			temp = temp -> next;
-			
-			if (temp == NULL)
-				return (NULL);
-		}
+		if (temp == NULL)
+			return (NULL);
+	}
 
-		point -> next = temp -> next;
-		temp -> next = point;
+	point->next = temp->next;
+	temp->next = point;
 	}
 	return (point);
-	free (point);
+	free(point);
 }
