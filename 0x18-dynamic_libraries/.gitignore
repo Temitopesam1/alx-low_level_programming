@@ -1,5 +1,4 @@
 *.o
-*.c
 lists.h
 *.py
 
