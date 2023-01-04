@@ -1,34 +1,59 @@
-#include <stdio.h>
-#include <stdlib.h>
+#include <math.h>
 #include "search_algos.h"
 
-listint_t *create_list(int *array, size_t size);
-void print_list(const listint_t *list);
-void free_list(listint_t *list);
+/**
+ * move_forward - moves a list forward until the index matches a desired
+ * index, or the last node in the list
+ * @list: list to move forward
+ * @index: desired index
+ *
+ * Return: node with desired index, or last node in the list
+ */
+listint_t *move_forward(listint_t *list, size_t index)
+{
+	while (list->next != NULL && list->index < index)
+		list = list->next;
+	return (list);
+}
 
 /**
- * main - Entry point
+ * jump_list - searches for a value in a sorted list of integers using the Jump
+ * search algorithm
+ * @list: pointer to the head of the list to search in
+ * @size: number of nodes in list
+ * @value: value to search for
  *
- * Return: Always EXIT_SUCCESS
+ * Return: pointer to the first node where value is located, or NULL on failure
  */
-int main(void)
+listint_t *jump_list(listint_t *list, size_t size, int value)
 {
-    listint_t *list, *res;
-    int array[] = {
-        0, 1, 2, 3, 4, 7, 12, 15, 18, 19, 23, 53, 61, 62, 76, 99
-    };
-    size_t size = sizeof(array) / sizeof(array[0]);
+	size_t jump;
+	listint_t *left, *right;
 
-    list = create_list(array, size);
-    print_list(list);
-
-    res =  jump_list(list, size, 53);
-    printf("Found %d at index: %lu\n\n", 53, res->index);
-    res =  jump_list(list, size, 2);
-    printf("Found %d at index: %lu\n\n", 2, res->index);
-    res =  jump_list(list, size, 999);
-    printf("Found %d at index: %p\n", 999, (void *) res);
-
-    free_list(list);
-    return (EXIT_SUCCESS);
+	if (list != NULL && size > 0)
+	{
+		jump = sqrt(size);
+		left = list;
+		right = move_forward(left, jump);
+		printf("Value checked at index [%lu] = [%d]\n", right->index, right->n);
+		while (right->index < (size - 1) && right->n < value)
+		{
+			left = right;
+			right = move_forward(left, right->index + jump);
+			printf("Value checked at index [%lu] = [%d]\n", right->index, right->n);
+		}
+		printf("Value found between indexes [%lu] and [%lu]\n",
+		       left->index, right->index);
+		printf("Value checked at index [%lu] = [%d]\n", left->index, left->n);
+		while (left->index < size - 1 && left->n < value)
+		{
+			left = left->next;
+			if (left == NULL)
+				return (NULL);
+			printf("Value checked at index [%lu] = [%d]\n", left->index, left->n);
+		}
+		if (left->n == value)
+			return (left);
+	}
+	return (NULL);
 }
