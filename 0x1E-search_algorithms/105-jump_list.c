@@ -24,6 +24,7 @@ listint_t *move_forward(listint_t *list, size_t index)
  * @value: value to search for
  *
  * Return: pointer to the first node where value is located, or NULL on failure
+ *
  */
 listint_t *jump_list(listint_t *list, size_t size, int value)
 {
